@@ -12,7 +12,7 @@ export default function CostEstimationForm() {
     development_type: '',
     sizing_method: '',
     application_domain: '',
-    top_management_opinion: '',
+    top_management_opinion: '', 
     environment_adequacy: '',
     num_languages: '',
     user_resistance: '',
@@ -209,25 +209,56 @@ export default function CostEstimationForm() {
           <input type="number" name="hourly_rate" onChange={handleChange} required />
         </label>
 
-        <label>Cost of Living Index (COLI)
-          <input type="number" name="coli" onChange={handleChange} required />
-        </label>
-
-        <label>Complexity Level
-          <select name="complexity_level" onChange={handleChange} required>
+        <label>Location
+          <select name="location" onChange={handleChange} required>
             <option value="">--Select--</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
+            <option value="India Tier 2">India Tier 2</option>
+            <option value="India Tier 1">India Tier 1</option>
+            <option value="Eastern Europe">Eastern Europe</option>
+            <option value="Western Europe">Western Europe</option>
+            <option value="US">US</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            <option value="Southeast Asia">Southeast Asia</option>
           </select>
         </label>
 
-        <label>Team Multiplier
-          <input type="number" name="team_multiplier" onChange={handleChange} required />
+        <label>Product Complexity
+          <select name="complexity_level" onChange={handleChange} required>
+            <option value="">--Select--</option>
+            <option value="Low">Low</option>
+            <option value="Moderate">Moderate</option>
+            <option value="High">High</option>
+            <option value="Very High">Very High</option>
+          </select>
         </label>
 
-        <label>Tech Multiplier
-          <input type="number" name="tech_multiplier" onChange={handleChange} required />
+        <label>Team Level
+          <select name="team_level" onChange={handleChange} required>
+            <option value="">--Select--</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Expert">Expert</option>
+            <option value="Junior">Junior</option>
+            <option value="Senior">Senior</option>
+            <option value="Some">Some</option>
+          </select>
+        </label>
+
+        <label>Tech Stack
+          <select name="tech_stack" onChange={handleChange} required>
+            <option value="">--Select--</option>
+            <option value="MERN">MERN</option>
+            <option value="MEAN">MEAN</option>
+            <option value="Spring Boot">Spring Boot</option>
+            <option value="Django">Django</option>
+            <option value="Flutter">Flutter</option>
+            <option value="Blockchain">Blockchain</option>
+            <option value="React Native">React Native</option>
+            <option value="ASP.NET">ASP.NET</option>
+            <option value="VueJS + Node">VueJS + Node</option>
+            <option value="Ruby on Rails">Ruby on Rails</option>
+          </select>
         </label>
 
         <label>Overhead Cost
